@@ -1,6 +1,6 @@
+import 'package:fitness_app/widgets/bottom_nav_item.dart';
 import 'package:flutter/material.dart';
 
-import '../main.dart';
 
 
 class BottomNavBar extends StatelessWidget {
