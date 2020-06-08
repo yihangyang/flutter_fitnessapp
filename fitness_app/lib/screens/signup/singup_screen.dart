@@ -1,7 +1,7 @@
-import 'package:fitness_app/screens/login/components/body.dart';
+import 'package:fitness_app/screens/signup/components/body.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatelessWidget {
+class SignupScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -9,3 +9,4 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
+

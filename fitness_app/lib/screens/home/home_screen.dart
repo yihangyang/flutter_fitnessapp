@@ -39,11 +39,11 @@ class HomeScreen extends StatelessWidget {
                         width: 52,
                         decoration: BoxDecoration(
                           color: Color(0xFFF2BEA1),
-                          shape: BoxShape.circle
+                          shape: BoxShape.circle,
                         ),
                         child: SvgPicture.asset("assets/icons/menu.svg"),
+                        
                       ),
-                      
                     ),
                     Text(
                       "Good Morning \nJenny",
@@ -84,6 +84,11 @@ class HomeScreen extends StatelessWidget {
                           ),
                           CategorieCard(
                             title: "Yoga",
+                            svgSrc: "assets/icons/yoga.svg",
+                            press: () {},
+                          ),
+                          CategorieCard(
+                            title: "Sleep",
                             svgSrc: "assets/icons/yoga.svg",
                             press: () {},
                           ),

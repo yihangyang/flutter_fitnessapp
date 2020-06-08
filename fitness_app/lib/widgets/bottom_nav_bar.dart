@@ -1,3 +1,4 @@
+import 'package:fitness_app/screens/welcome/welcome_screen.dart';
 import 'package:fitness_app/widgets/bottom_nav_item.dart';
 import 'package:flutter/material.dart';
 
@@ -25,10 +26,21 @@ class BottomNavBar extends StatelessWidget {
             title: "All Excerises",
             svgScr: "assets/icons/gym.svg",
             isActive: true,
+            press: () {},
           ),
           BottomNavItem(
             title: "Settings",
             svgScr: "assets/icons/Settings.svg",
+            press: () {
+              Navigator.push(
+                context, 
+                MaterialPageRoute(
+                  builder: (context) {
+                    return WelcomeScreen();
+                  }
+                ),
+              );
+            }
           ),
         ],
       ),

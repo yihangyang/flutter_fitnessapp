@@ -1,11 +1,12 @@
 import 'package:fitness_app/components/rounded_button.dart';
 import 'package:fitness_app/constants.dart';
 import 'package:fitness_app/screens/login/login_screen.dart';
+import 'package:fitness_app/screens/signup/singup_screen.dart';
 import 'package:fitness_app/screens/welcome/components/background.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class WelcomeBody extends StatelessWidget {
+class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -38,10 +39,19 @@ class WelcomeBody extends StatelessWidget {
               },
             ),
             RoundedButton(
-              text: "LOGON",
+              text: "SIGN UP",
               color: kPrimaryLightColor,
               textColor: Colors.black,
-              press: () {},
+              press: () {
+                Navigator.push(
+                  context, 
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return SignupScreen();
+                    }
+                  ),
+                );
+              },
             )
           ],
         ),
