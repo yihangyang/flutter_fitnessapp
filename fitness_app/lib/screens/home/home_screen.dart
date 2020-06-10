@@ -1,6 +1,7 @@
+import 'package:fitness_app/screens/book/book_screen.dart';
 import 'package:fitness_app/screens/detail/detail_screen.dart';
+import 'package:fitness_app/screens/home/components/categorie_card.dart';
 import 'package:fitness_app/widgets/bottom_nav_bar.dart';
-import 'package:fitness_app/widgets/categorie_card.dart';
 import 'package:fitness_app/widgets/search_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -66,9 +67,16 @@ class HomeScreen extends StatelessWidget {
                             press: () {},
                           ),
                           CategorieCard(
-                            title: "Kegel Exercises",
+                            title: "Reading",
                             svgSrc: "assets/icons/Excrecises.svg",
-                            press: () {},
+                            press: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) {
+                                  return BookScreen();
+                                })
+                              );
+                            },
                           ),
                           CategorieCard(
                             title: "Meditation",
@@ -88,7 +96,29 @@ class HomeScreen extends StatelessWidget {
                             press: () {},
                           ),
                           CategorieCard(
-                            title: "Sleep",
+                            title: "Diet Recommendation",
+                            svgSrc: "assets/icons/Hamburger.svg",
+                            press: () {},
+                          ),
+                          CategorieCard(
+                            title: "Kegel Exercises",
+                            svgSrc: "assets/icons/Excrecises.svg",
+                            press: () {},
+                          ),
+                          CategorieCard(
+                            title: "Meditation",
+                            svgSrc: "assets/icons/Meditation.svg",
+                            press: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) {
+                                  return DetailScreen();
+                                })
+                              );
+                            },
+                          ),
+                          CategorieCard(
+                            title: "Yoga",
                             svgSrc: "assets/icons/yoga.svg",
                             press: () {},
                           ),

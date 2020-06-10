@@ -14,12 +14,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Fitness App',
       theme: ThemeData(
         primaryColor: kPrimaryColor,
         fontFamily: "Cairo",
         scaffoldBackgroundColor: kBackgroundColor,
-        textTheme: Theme.of(context).textTheme.apply(displayColor: kTextColor),
+        textTheme: Theme.of(context).textTheme.apply(
+          displayColor: kBlackColor
+        ),
       ),
       home: HomeScreen(),
       // home: WelcomeScreen(),
