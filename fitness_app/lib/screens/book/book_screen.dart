@@ -1,5 +1,5 @@
 import 'package:fitness_app/screens/book/components/rounded_button.dart';
-import 'package:fitness_app/screens/shell/shell_screen.dart';
+import 'package:fitness_app/screens/reading/shell/shell_screen.dart';
 import 'package:flutter/material.dart';
 
 class BookScreen extends StatelessWidget {

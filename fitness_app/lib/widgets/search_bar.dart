@@ -18,7 +18,7 @@ class SearchBar extends StatelessWidget {
       child: TextField(
         decoration: InputDecoration(
           hintText: "Google Search",
-          icon: SvgPicture.asset("assets/icons/search.svg"),
+          icon: SvgPicture.asset("assets/icons/fit_search.svg"),
           border: InputBorder.none
         ),
       ),

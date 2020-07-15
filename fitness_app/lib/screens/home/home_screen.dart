@@ -63,12 +63,12 @@ class HomeScreen extends StatelessWidget {
                         children: <Widget>[
                           CategorieCard(
                             title: "Diet Recommendation",
-                            svgSrc: "assets/icons/Hamburger.svg",
+                            svgSrc: "assets/icons/fit_hamburger.svg",
                             press: () {},
                           ),
                           CategorieCard(
                             title: "Reading",
-                            svgSrc: "assets/icons/Excrecises.svg",
+                            svgSrc: "assets/icons/fit_excrecises.svg",
                             press: () {
                               Navigator.push(
                                 context,
@@ -80,7 +80,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                           CategorieCard(
                             title: "Meditation",
-                            svgSrc: "assets/icons/Meditation.svg",
+                            svgSrc: "assets/icons/fit_meditation.svg",
                             press: () {
                               Navigator.push(
                                 context,
@@ -92,22 +92,22 @@ class HomeScreen extends StatelessWidget {
                           ),
                           CategorieCard(
                             title: "Yoga",
-                            svgSrc: "assets/icons/yoga.svg",
+                            svgSrc: "assets/icons/fit_yoga.svg",
                             press: () {},
                           ),
                           CategorieCard(
                             title: "Diet Recommendation",
-                            svgSrc: "assets/icons/Hamburger.svg",
+                            svgSrc: "assets/icons/fit_hamburger.svg",
                             press: () {},
                           ),
                           CategorieCard(
                             title: "Kegel Exercises",
-                            svgSrc: "assets/icons/Excrecises.svg",
+                            svgSrc: "assets/icons/fit_excrecises.svg",
                             press: () {},
                           ),
                           CategorieCard(
                             title: "Meditation",
-                            svgSrc: "assets/icons/Meditation.svg",
+                            svgSrc: "assets/icons/fit_meditation.svg",
                             press: () {
                               Navigator.push(
                                 context,
@@ -119,7 +119,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                           CategorieCard(
                             title: "Yoga",
-                            svgSrc: "assets/icons/yoga.svg",
+                            svgSrc: "assets/icons/fit_yoga.svg",
                             press: () {},
                           ),
                         ],

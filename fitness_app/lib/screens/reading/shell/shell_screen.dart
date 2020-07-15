@@ -1,6 +1,6 @@
-import 'package:fitness_app/constants.dart';
-import 'package:fitness_app/screens/shell/components/book_rating.dart';
-import 'package:fitness_app/screens/shell/components/two_side_rounded_button.dart';
+import 'package:fitness_app/config/constants.dart';
+import 'package:fitness_app/screens/reading/shell/components/book_rating.dart';
+import 'package:fitness_app/screens/reading/shell/components/two_side_rounded_button.dart';
 import 'package:flutter/material.dart';
 
 class ShellScreen extends StatelessWidget {

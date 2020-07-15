@@ -1,32 +1,33 @@
-import 'package:fitness_app/components/text_field_container.dart';
-import 'package:fitness_app/constants.dart';
+import 'package:fitness_app/widgets/text_field_container.dart';
+import 'package:fitness_app/config/constants.dart';
 import 'package:flutter/material.dart';
 
-class RoundedPasswordField extends StatelessWidget {
+class RoundedInputField extends StatelessWidget {
+  final String hintText;
+  final IconData icon;
   final ValueChanged<String> onChanged;
-  const RoundedPasswordField({
-    Key key, this.onChanged,
+  const RoundedInputField({
+    Key key,
+    this.hintText,
+    this.icon = Icons.people,
+    this.onChanged,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextFieldContainer(
       child: TextField(
-        obscureText: true,
         onChanged: onChanged,
         decoration: InputDecoration(
-          hintText: "Password",
           icon: Icon(
-            Icons.lock,
+            icon,
             color: kPrimaryColor,
           ),
-          suffixIcon: Icon(
-            Icons.visibility,
-            color: kPrimaryColor,
-          ),
+          hintText: hintText,
           border: InputBorder.none
         ),
       ),
     );
   }
 }
+

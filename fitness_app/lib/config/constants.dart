@@ -19,3 +19,14 @@ const kIconColor = Color(0xFFF48A37);
 const kProgressIndicator = Color(0xFFBE7066);
 
 final kShadowColorBook = Color(0xFFD3D3D3).withOpacity(.84);
+
+// funiture
+const kSecondaryColor = Color(0xFFFFA41B);
+const kTextLightColor = Color(0xFF747474);
+const kDefaultPadding = 20.0;
+// our default Shadow
+const kDefaultShadow = BoxShadow(
+  offset: Offset(0, 15),
+  blurRadius: 27,
+  color: Colors.black12, // Black color with 12% opacity
+);

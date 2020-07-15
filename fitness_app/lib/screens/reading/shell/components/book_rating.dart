@@ -1,4 +1,4 @@
-import 'package:fitness_app/constants.dart';
+import 'package:fitness_app/config/constants.dart';
 import 'package:flutter/material.dart';
 
 class BookRating extends StatelessWidget {
