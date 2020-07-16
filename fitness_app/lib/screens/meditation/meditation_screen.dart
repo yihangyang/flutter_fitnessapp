@@ -5,7 +5,7 @@ import 'package:fitness_app/widgets/search_bar.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/svg.dart';
 
-class DetailScreen extends StatelessWidget {
+class MeditationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;

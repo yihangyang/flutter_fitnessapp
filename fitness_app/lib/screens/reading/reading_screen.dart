@@ -1,8 +1,8 @@
-import 'package:fitness_app/screens/book/components/rounded_button.dart';
+import 'package:fitness_app/screens/reading/components/rounded_button.dart';
 import 'package:fitness_app/screens/reading/shell/shell_screen.dart';
 import 'package:flutter/material.dart';
 
-class BookScreen extends StatelessWidget {
+class ReadingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

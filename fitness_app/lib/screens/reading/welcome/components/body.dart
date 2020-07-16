@@ -1,8 +1,8 @@
 import 'package:fitness_app/screens/reading/welcome/components/background.dart';
 import 'package:fitness_app/widgets/rounded_button.dart';
 import 'package:fitness_app/config/constants.dart';
-import 'package:fitness_app/screens/login/login_screen.dart';
-import 'package:fitness_app/screens/signup/singup_screen.dart';
+import 'package:fitness_app/screens/profile/login/login_screen.dart';
+import 'package:fitness_app/screens/profile/signup/singup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -21,7 +21,7 @@ class Body extends StatelessWidget {
             ),
             SizedBox(height: size.height * .03,),
             SvgPicture.asset(
-              "assets/icons/chat.svg",
+              "assets/icons/login_chat.svg",
               height: size.height * .5,
             ),
             SizedBox(height: size.height * .05,),

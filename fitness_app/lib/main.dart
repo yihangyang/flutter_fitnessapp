@@ -1,5 +1,6 @@
 
-import 'package:fitness_app/screens/softwarestufe/stufe_screen.dart';
+import 'package:fitness_app/screens/home/home_screen.dart';
+import 'package:fitness_app/screens/softwarestufe/stufe_screen/stufe_screen.dart';
 import 'package:fitness_app/viewmodel/initialize_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:fitness_app/config/constants.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
           displayColor: kBlackColor
         ),
       ),
-      home: StufeScreen(),
+      home: HomeScreen(),
       // home: WelcomeScreen(),
     );
   }

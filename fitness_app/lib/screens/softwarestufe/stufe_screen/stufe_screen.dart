@@ -1,22 +1,22 @@
 import 'package:fitness_app/config/constants.dart';
-import 'package:fitness_app/screens/funiture/components/body.dart';
+import 'package:fitness_app/screens/softwarestufe/stufe_screen/components/stufe_content.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class FunitureScreen extends StatelessWidget {
+class StufeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kPrimaryColor,
       appBar: buildAppBar(),
-      body: Body(),
+      body: StufeContent(),
     );
   }
 
   AppBar buildAppBar() {
     return AppBar(
       elevation: 0,
-      title: Text('DashBord'),
+      title: Text('8-Level Softwareentwicklungsprozess'),
       centerTitle: false,
       actions: <Widget>[
         IconButton(icon:SvgPicture.asset("assets/icons/funi_notification.svg"),

@@ -1,8 +1,7 @@
 import 'package:fitness_app/config/constants.dart';
-import 'package:fitness_app/model/product_model.dart';
-import 'package:fitness_app/screens/softwarestufe/components/category_list.dart';
-import 'package:fitness_app/screens/softwarestufe/components/details_screen/softwarestufe_content.dart';
-import 'package:fitness_app/screens/softwarestufe/components/product_card.dart';
+import 'package:fitness_app/screens/softwarestufe/product_screen/product_screen.dart';
+import 'package:fitness_app/screens/softwarestufe/stufe_screen/components/category_list.dart';
+import 'package:fitness_app/screens/softwarestufe/stufe_screen/components/product_card.dart';
 import 'package:fitness_app/viewmodel/stufe_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -42,8 +41,8 @@ class StufeContent extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => SoftwaredtufeContent(
-                                // product: products[index],
+                              builder: (context) => ProductsScreen(
+                                index: index,
                               ),
                             ),
                           );

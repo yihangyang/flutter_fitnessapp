@@ -1,6 +1,7 @@
-import 'package:fitness_app/screens/book/book_screen.dart';
-import 'package:fitness_app/screens/detail/detail_screen.dart';
 import 'package:fitness_app/screens/home/components/categorie_card.dart';
+import 'package:fitness_app/screens/meditation/meditation_screen.dart';
+import 'package:fitness_app/screens/reading/reading_screen.dart';
+import 'package:fitness_app/screens/softwarestufe/stufe_screen/stufe_screen.dart';
 import 'package:fitness_app/widgets/bottom_nav_bar.dart';
 import 'package:fitness_app/widgets/search_bar.dart';
 import 'package:flutter/material.dart';
@@ -62,9 +63,16 @@ class HomeScreen extends StatelessWidget {
                         mainAxisSpacing: 20,
                         children: <Widget>[
                           CategorieCard(
-                            title: "Diet Recommendation",
+                            title: "Funiture",
                             svgSrc: "assets/icons/fit_hamburger.svg",
-                            press: () {},
+                            press: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) {
+                                  return StufeScreen();
+                                })
+                              );
+                            }
                           ),
                           CategorieCard(
                             title: "Reading",
@@ -73,7 +81,7 @@ class HomeScreen extends StatelessWidget {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(builder: (context) {
-                                  return BookScreen();
+                                  return ReadingScreen();
                                 })
                               );
                             },
@@ -85,7 +93,7 @@ class HomeScreen extends StatelessWidget {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(builder: (context) {
-                                  return DetailScreen();
+                                  return MeditationScreen();
                                 })
                               );
                             },
@@ -112,7 +120,7 @@ class HomeScreen extends StatelessWidget {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(builder: (context) {
-                                  return DetailScreen();
+                                  return MeditationScreen();
                                 })
                               );
                             },

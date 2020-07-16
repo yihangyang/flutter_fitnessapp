@@ -1,4 +1,4 @@
-import 'package:fitness_app/screens/login/components/body.dart';
+import 'package:fitness_app/screens/profile/login/components/body.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
