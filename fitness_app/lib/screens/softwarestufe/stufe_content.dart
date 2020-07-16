@@ -3,9 +3,11 @@ import 'package:fitness_app/model/product_model.dart';
 import 'package:fitness_app/screens/softwarestufe/components/category_list.dart';
 import 'package:fitness_app/screens/softwarestufe/components/details_screen/softwarestufe_content.dart';
 import 'package:fitness_app/screens/softwarestufe/components/product_card.dart';
+import 'package:fitness_app/viewmodel/stufe_view_model.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-class Body extends StatelessWidget {
+class StufeContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -29,24 +31,28 @@ class Body extends StatelessWidget {
                     ),
                   ),
                 ),
-                ListView.builder(
-                  // here we use our demo procuts list
-                  itemCount: products.length,
-                  itemBuilder: (context, index) => ProductCard(
-                    itemIndex: index,
-                    product: products[index],
-                    press: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => SoftwaredtufeContent(
-                            // product: products[index],
-                          ),
-                        ),
-                      );
-                    },
-                  ),
+                Consumer<StufeViewModel>(
+                  builder: (ctx, cVM, child) {
+                    return ListView.builder(
+                      // here we use our demo procuts list
+                      itemCount: cVM.getGoodsList.length,
+                      itemBuilder: (context, index) => ProductCard(
+                        itemIndex: index,
+                        press: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SoftwaredtufeContent(
+                                // product: products[index],
+                              ),
+                            ),
+                          );
+                        },
+                      ),
+                    );
+                  },
                 )
+                
               ],
             ),
           ),

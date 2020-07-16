@@ -1,15 +1,15 @@
 import 'package:fitness_app/config/constants.dart';
-import 'package:fitness_app/screens/softwarestufe/components/body.dart';
+import 'package:fitness_app/screens/softwarestufe/stufe_content.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class SoftwarestufeScreen extends StatelessWidget {
+class StufeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kPrimaryColor,
       appBar: buildAppBar(),
-      body: Body(),
+      body: StufeContent(),
     );
   }
 
