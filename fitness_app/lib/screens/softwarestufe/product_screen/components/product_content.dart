@@ -47,7 +47,7 @@ class _ProductContentState extends State<ProductContent> {
                         child: Hero(
                           tag: '${stufeVM.getGoodsList[widget.index].id}',
                           child: ProductPoster(
-                            size: size,
+                            size: size ,
                             image: stufeVM.getGoodsList[widget.index].image,
                           ),
                         ),

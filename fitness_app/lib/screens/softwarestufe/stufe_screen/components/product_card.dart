@@ -72,10 +72,10 @@ class _ProductCardState extends State<ProductCard> {
                       height: 160,
                       // image is square but we add extra 20 + 20 padding thats why width is 200
                       width: 200,
-                      // child: Image.network(
-                      //   sVM.getGoodsList[widget.itemIndex].image,
-                      //   fit: BoxFit.cover,
-                      // )
+                      child: Image.network(
+                        sVM.getGoodsList[widget.itemIndex].image,
+                        fit: BoxFit.cover,
+                      )
                     ),
                   ),
                 ),
