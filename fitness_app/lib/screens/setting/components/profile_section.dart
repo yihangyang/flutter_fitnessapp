@@ -11,11 +11,22 @@ class ProfileSection extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
-        Text(
-          'Setting',
-          style: TextStyle(
-              color: Colors.white, fontSize: 38.0, fontWeight: FontWeight.w500),
+        Row(
+          children: [
+            IconButton(
+              icon: Icon(Icons.arrow_back_ios),
+              color: Colors.grey,
+              onPressed: () => Navigator.pop(context)
+              // size: 24.0,
+            ),
+            Text(
+              ' Setting',
+              style: TextStyle(
+                  color: Colors.white, fontSize: 28.0, fontWeight: FontWeight.w500),
+            ),
+          ],
         ),
+        
         Material(
           elevation: 4.0,
           borderRadius: BorderRadius.circular(50.0),
