@@ -1,14 +1,62 @@
   
 import 'package:fitness_app/config/constants.dart';
+import 'package:fitness_app/screens/softwarestufe/game_screen/game_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
-import 'package:slide_popup_dialog/slide_popup_dialog.dart' as slideDialog;
 import 'package:slide_to_confirm/slide_to_confirm.dart';
 
+class AddCart1 extends StatelessWidget {
+  final int index;
 
-class AddCart extends StatelessWidget {
-  const AddCart({
+  const AddCart1({
+    Key key, this.index,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.all(kDefaultPadding),
+      padding: EdgeInsets.symmetric(
+        horizontal: kDefaultPadding,
+        vertical: kDefaultPadding / 2,
+      ),
+      decoration: BoxDecoration(
+        color: Color(0xFFFCBF1E),
+        borderRadius: BorderRadius.circular(30),
+      ),
+      child: GestureDetector(
+        onTap: () { 
+          print(this.index);
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => GameScreen(
+                index: this.index,
+              ),
+            ),
+          );
+        },
+        child: Container(
+          height: 50,
+          child: Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+             Text("Los Geht's",
+                style: TextStyle(color: Colors.white, fontSize: 18),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+
+class AddCart2 extends StatelessWidget {
+  const AddCart2({
     Key key,
   }) : super(key: key);
 
@@ -33,7 +81,7 @@ class AddCart extends StatelessWidget {
           SizedBox(width: kDefaultPadding / 2),
           Text(
             "Chat",
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color: Colors.white, fontSize: 16),
           ),
           // it will cover all available spaces
           Spacer(),
@@ -47,7 +95,7 @@ class AddCart extends StatelessWidget {
             ),
             label: Text(
               "Add to Cart",
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.white, fontSize: 16),
             ),
           ),
         ],

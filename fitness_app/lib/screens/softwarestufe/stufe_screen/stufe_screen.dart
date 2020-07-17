@@ -16,7 +16,7 @@ class StufeScreen extends StatelessWidget {
   AppBar buildAppBar() {
     return AppBar(
       elevation: 0,
-      title: Text('8-Level Softwareentwicklungsprozess'),
+      title: Text('Softwareentwicklungsprozess'),
       centerTitle: false,
       actions: <Widget>[
         IconButton(icon:SvgPicture.asset("assets/icons/funi_notification.svg"),

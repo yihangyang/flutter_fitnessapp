@@ -82,11 +82,9 @@ class _ProductContentState extends State<ProductContent> {
                   );
                 }
               )
-
-              
-              
             ),
-            AddCart(),
+            AddCart2(),
+            AddCart1(),
           ],
         ),
       ),

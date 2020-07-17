@@ -1,5 +1,6 @@
 import 'package:fitness_app/screens/reading/welcome/welcome_screen.dart';
-import 'package:fitness_app/widgets/bottom_nav_item.dart';
+import 'package:fitness_app/screens/home/components/bottom_nav_item.dart';
+import 'package:fitness_app/screens/setting/setting_screen.dart';
 import 'package:flutter/material.dart';
 
 
@@ -36,7 +37,7 @@ class BottomNavBar extends StatelessWidget {
                 context, 
                 MaterialPageRoute(
                   builder: (context) {
-                    return WelcomeScreen();
+                    return SettingScreen();
                   }
                 ),
               );

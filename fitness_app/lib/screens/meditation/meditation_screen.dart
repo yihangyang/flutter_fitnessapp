@@ -1,5 +1,5 @@
 import 'package:fitness_app/config/constants.dart';
-import 'package:fitness_app/widgets/bottom_nav_bar.dart';
+import 'package:fitness_app/screens/home/components/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:fitness_app/widgets/search_bar.dart';
 import 'package:flutter/rendering.dart';
