@@ -21,8 +21,10 @@ class ProfileSection extends StatelessWidget {
             ),
             Text(
               ' Setting',
-              style: TextStyle(
-                  color: Colors.white, fontSize: 28.0, fontWeight: FontWeight.w500),
+              style: Theme.of(context)
+                      .textTheme
+                      .headline4
+                      .copyWith(fontWeight: FontWeight.w900, color: Colors.white),
             ),
           ],
         ),

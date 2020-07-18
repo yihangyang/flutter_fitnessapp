@@ -36,9 +36,11 @@ class GameContent extends StatelessWidget {
                       SizedBox(
                         width: 16.0,
                       ),
-                      Text(
-                        'Bedroom',
-                        style: TextStyle(color: Colors.white, fontSize: 20.0),
+                      Text('Bedroom',
+                        style: Theme.of(context)
+                        .textTheme
+                        .headline5
+                        .copyWith(fontWeight: FontWeight.w900,color: Colors.white),
                       )
                     ],
                   ),

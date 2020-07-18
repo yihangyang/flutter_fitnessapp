@@ -53,7 +53,7 @@ class HomeContent extends StatelessWidget {
                     "Good Morning \nJenny",
                     style: Theme.of(context)
                       .textTheme
-                      .display1
+                      .headline4
                       .copyWith(fontWeight: FontWeight.w900),
                   ),
                   SearchBar(),
