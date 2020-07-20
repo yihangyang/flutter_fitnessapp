@@ -1,4 +1,5 @@
 import 'package:fitness_app/model/artical_model.dart';
+import 'package:fitness_app/screens/news/components/article_grid.dart';
 import 'package:fitness_app/service/api_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,8 @@ class _NewsContentState extends State<NewsContent> {
   }
 
   _fetchArticles(String serchKey) async {
-    List<ArticleModel> articles = await APIService().fetchArticlesBySection(serchKey);
+    List<ArticleModel> articles =
+        await APIService().fetchArticlesBySection(serchKey);
     setState(() {
       _articles = articles;
     });
@@ -33,17 +35,19 @@ class _NewsContentState extends State<NewsContent> {
       tiles.add(_buildArticlesTile(article, mediaQuery, index));
     });
     return Padding(
-      padding: EdgeInsets.all(0),
+      padding: EdgeInsets.all(5),
       child: GridView.count(
         crossAxisCount: 2,
         mainAxisSpacing: 30,
         crossAxisSpacing: 15,
+        childAspectRatio: .9,
         shrinkWrap: true,
         physics: NeverScrollableScrollPhysics(),
         children: tiles,
       ),
     );
   }
+
   _launchURL(String url) async {
     if (await canLaunch(url)) {
       await launch(url);
@@ -51,7 +55,9 @@ class _NewsContentState extends State<NewsContent> {
       throw 'Could not launch $url';
     }
   }
-  _buildArticlesTile(ArticleModel article, MediaQueryData mediaQuery, int index) {
+
+  _buildArticlesTile(
+      ArticleModel article, MediaQueryData mediaQuery, int index) {
     return GridTile(
       child: GestureDetector(
         onTap: () => _launchURL(article.url),
@@ -59,23 +65,19 @@ class _NewsContentState extends State<NewsContent> {
           children: [
             // photo
             Container(
-              height: 130,
+              height: 120,
               alignment: Alignment.bottomCenter,
               decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20),
-                  topRight: Radius.circular(20),
-                ),
-                image: DecorationImage(
-                  image: NetworkImage(
-                    article.multimedia != null
-                      ? article.multimedia[0].url
-                      : "https://static01.nyt.com/images/2020/07/19/business/00airbnb1/merlin_173400378_c8e2a75e-fc10-4a7b-83e3-0a448fe486e1-superJumbo.jpg"
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(20),
+                    topRight: Radius.circular(20),
                   ),
-                  fit: BoxFit.cover
-                )
-              ),
+                  image: DecorationImage(
+                      image: NetworkImage(article.multimedia != null
+                          ? article.multimedia[0].url
+                          : "https://static01.nyt.com/images/2020/07/19/business/00airbnb1/merlin_173400378_c8e2a75e-fc10-4a7b-83e3-0a448fe486e1-superJumbo.jpg"),
+                      fit: BoxFit.cover)),
             ),
             // title
             Container(
@@ -100,11 +102,9 @@ class _NewsContentState extends State<NewsContent> {
               child: Text(
                 article.title,
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold
-                ),
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                 maxLines: 2,
+                overflow: TextOverflow.ellipsis,
               ),
             )
           ],
@@ -112,30 +112,34 @@ class _NewsContentState extends State<NewsContent> {
       ),
     );
   }
+
   @override
   Widget build(BuildContext context) {
     final mediaQuery = MediaQuery.of(context);
     return Scaffold(
       body: ListView(
         children: [
-          SizedBox(height: 40,),
+          SizedBox(
+            height: 40,
+          ),
           Center(
             child: Text(
               "Centre News\nTop Tech Articles",
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-                letterSpacing: 1.5
-              ),
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 1.5),
             ),
           ),
-          SizedBox(height: 40,),
+          SizedBox(
+            height: 40,
+          ),
           _articles.length > 0
-            ? _buildArticlesGrid(mediaQuery)
-            : Center(
-              child: CircularProgressIndicator(),
-            )
+              ? _buildArticlesGrid(mediaQuery)
+              : Center(
+                  child: CircularProgressIndicator(),
+                )
         ],
       ),
     );
