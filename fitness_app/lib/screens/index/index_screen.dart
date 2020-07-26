@@ -1,23 +1,24 @@
 import 'package:fitness_app/screens/home/home_screen.dart';
 import 'package:fitness_app/screens/news/news_screen.dart';
 import 'package:fitness_app/screens/profile/login/login_screen.dart';
+import 'package:fitness_app/screens/video/video_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class MainScreen extends StatefulWidget {
+class IndexScreen extends StatefulWidget {
   @override
-  _MainScreenState createState() => _MainScreenState();
+  _IndexScreenState createState() => _IndexScreenState();
 }
 
-class _MainScreenState extends State<MainScreen> {
+class _IndexScreenState extends State<IndexScreen> {
   final List<BottomNavigationBarItem> bottomTabs = [
     BottomNavigationBarItem(
       icon: Icon(CupertinoIcons.tags),
       title: Text('Excerises'),
     ),
     BottomNavigationBarItem(
-      icon: Icon(CupertinoIcons.search),
-      title: Text('Category'),
+      icon: Icon(CupertinoIcons.play_arrow),
+      title: Text('Ytb'),
     ),
     BottomNavigationBarItem(
       icon: Icon(CupertinoIcons.news),
@@ -30,7 +31,7 @@ class _MainScreenState extends State<MainScreen> {
   ];
   final List tabBodies = [
     HomeScreen(),
-    HomeScreen(),
+    VideoScreen(),
     NewsScreen(),
     LoginScreen(),
   ];

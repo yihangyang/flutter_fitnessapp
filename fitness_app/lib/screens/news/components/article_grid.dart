@@ -15,9 +15,8 @@ class ArticleGrid extends StatelessWidget {
     articles.forEach((article) {
       index++;
       tiles.add(GridTile(
-          child: ArticleTile(
-              article: article, mediaQuery: mediaQuery, index: index)));
-      print(tiles.toList());
+        child: ArticleTile(
+          article: article, mediaQuery: mediaQuery, index: index)));
     });
     return Padding(
       padding: EdgeInsets.all(0),

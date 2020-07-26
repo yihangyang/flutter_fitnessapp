@@ -21,7 +21,7 @@ class _NewsContentState extends State<NewsContent> {
 
   _fetchArticles(String serchKey) async {
     List<ArticleModel> articles =
-        await APIService().fetchArticlesBySection(serchKey);
+        await NytAPIService().fetchArticlesBySection(serchKey);
     setState(() {
       _articles = articles;
     });

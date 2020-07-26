@@ -2,7 +2,7 @@ import 'package:fitness_app/screens/home/components/categorie_card.dart';
 import 'package:fitness_app/screens/meditation/meditation_screen.dart';
 import 'package:fitness_app/screens/reading/reading_screen.dart';
 import 'package:fitness_app/screens/softwarestufe/stufe_screen/stufe_screen.dart';
-import 'package:fitness_app/widgets/search_bar.dart';
+import 'package:fitness_app/screens/widgets/search_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

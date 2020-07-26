@@ -1,11 +1,11 @@
-import 'package:fitness_app/widgets/have_account_check.dart';
-import 'package:fitness_app/widgets/rounded_button.dart';
-import 'package:fitness_app/widgets/rounded_input_field.dart';
-import 'package:fitness_app/widgets/rounded_password_field.dart';
 import 'package:fitness_app/screens/profile/login/login_screen.dart';
 import 'package:fitness_app/screens/profile/signup/components/background.dart';
 import 'package:fitness_app/screens/profile/signup/components/or_divider.dart';
 import 'package:fitness_app/screens/profile/signup/components/social_icon.dart';
+import 'package:fitness_app/screens/reading/components/rounded_button.dart';
+import 'package:fitness_app/screens/widgets/have_account_check.dart';
+import 'package:fitness_app/screens/widgets/rounded_input_field.dart';
+import 'package:fitness_app/screens/widgets/rounded_password_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

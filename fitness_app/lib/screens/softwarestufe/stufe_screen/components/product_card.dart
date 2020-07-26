@@ -140,7 +140,6 @@ class _ProductCardState extends State<ProductCard> {
   //     for(var json in stufeArray) {
   //       stufes.add(StufeModel.fromJson(json));
   //     }
-  //     print(stufes.toString());
   //   });
   // }
 

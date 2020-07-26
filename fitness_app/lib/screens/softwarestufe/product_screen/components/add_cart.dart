@@ -25,8 +25,7 @@ class AddCart1 extends StatelessWidget {
         borderRadius: BorderRadius.circular(30),
       ),
       child: GestureDetector(
-        onTap: () { 
-          print(this.index);
+        onTap: () {
           Navigator.push(
             context,
             MaterialPageRoute(
@@ -117,7 +116,6 @@ class AddCart2 extends StatelessWidget {
             text: 'Slide to purchase ',
             foregroundColor: kPrimaryColor,
             onConfirmation: () {
-              print('slider Comfirmation');
               Navigator.pop(context);
             }
           )

@@ -1,5 +1,5 @@
-import 'package:fitness_app/widgets/text_field_container.dart';
 import 'package:fitness_app/config/constants.dart';
+import 'package:fitness_app/screens/widgets/text_field_container.dart';
 import 'package:flutter/material.dart';
 
 class RoundedPasswordField extends StatelessWidget {

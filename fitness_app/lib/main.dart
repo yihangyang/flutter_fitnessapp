@@ -1,5 +1,5 @@
 
-import 'package:fitness_app/screens/main/main_screen.dart';
+import 'package:fitness_app/screens/index/index_screen.dart';
 import 'package:fitness_app/viewmodel/initialize_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:fitness_app/config/constants.dart';
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
           displayColor: kBlackColor
         ),
       ),
-      home: MainScreen(),
+      home: IndexScreen(),
       // home: WelcomeScreen(),
     );
   }

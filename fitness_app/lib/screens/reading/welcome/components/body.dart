@@ -1,8 +1,8 @@
 import 'package:fitness_app/screens/reading/welcome/components/background.dart';
-import 'package:fitness_app/widgets/rounded_button.dart';
 import 'package:fitness_app/config/constants.dart';
 import 'package:fitness_app/screens/profile/login/login_screen.dart';
 import 'package:fitness_app/screens/profile/signup/singup_screen.dart';
+import 'package:fitness_app/screens/widgets/rounded_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
