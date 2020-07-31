@@ -2,6 +2,7 @@ import 'package:fitness_app/screens/home/components/categorie_card.dart';
 import 'package:fitness_app/screens/meditation/meditation_screen.dart';
 import 'package:fitness_app/screens/reading/reading_screen.dart';
 import 'package:fitness_app/screens/softwarestufe/stufe_screen/stufe_screen.dart';
+import 'package:fitness_app/screens/speech/speech_screen.dart';
 import 'package:fitness_app/screens/widgets/search_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -101,9 +102,16 @@ class HomeContent extends StatelessWidget {
                           },
                         ),
                         CategorieCard(
-                          title: "Yoga",
+                          title: "Speak",
                           svgSrc: "assets/icons/fit_yoga.svg",
-                          press: () {},
+                          press: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return SpeechScreen();
+                              })
+                            );
+                          },
                         ),
                         CategorieCard(
                           title: "Diet Recommendation",
